@@ -1,0 +1,41 @@
+<button (click)="getQuote()">GetData</button>
+<br> <br>
+{{id}} <br> <br>
+
+{{author}} <br> <br>
+{{quote}} <br> <br>
+
+<button (click)="getAllData()">getAllData</button>
+
+<h2>Get all posts</h2>
+<table>
+<tr>
+  <th>Id</th>
+  <th>Title</th>
+  <th>Body</th>
+</tr>
+<tbody *ngFor="let p of allpost">
+  <tr>
+    <td>{{p.id}}</td>
+    <td>{{p.title}}</td>
+    <td>{{p.body}}</td>
+  </tr>
+</tbody>
+
+</table>
+
+<button (click)="getAllAlbum()">getAllAlbum</button>
+  <h2>Get all Albums</h2>
+  <table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+  </tr>
+  <tbody *ngFor="let p of allAlbum">
+    <tr>
+      <td>{{p.id}}</td>
+      <td>{{p.title}}</td>
+    </tr>
+  </tbody>
+
+  </table>
